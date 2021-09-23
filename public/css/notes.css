@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Eczar', serif;
+}
+
+section{
+    height: 100vh;
+    font-family: 'Eczar', serif;
+    background: linear-gradient(to top right,
+    rgb(246, 229, 233),
+    rgb(202, 232, 250));
+}
+
+.navbar ul{
+    background: linear-gradient(to top right,
+    rgb(246, 143, 164),
+    rgb(255, 206, 177));    
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+}
+
+.navbar ul li{
+    padding: 1rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.navbar ul a{
+    text-decoration: none;
+    color: rgb(5, 9, 65);
+    font-weight: 700;
+}
+
+.footer{
+    background: linear-gradient(to top right,
+    rgb(246, 143, 164),
+    rgb(255, 206, 177));    
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    padding: 8px;
+    color: rgb(5, 9, 65);
+    font-size: 20px;
+    font-weight: 700;
+    position: static;
+    bottom: 0;
+    width: 100%;
+}

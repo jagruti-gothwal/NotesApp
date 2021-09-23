@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Eczar', serif;
+}
+
+section{
+    height: 100vh;
+    font-family: 'Eczar', serif;
+    background: linear-gradient(to top right,
+    rgb(246, 229, 233),
+    rgb(202, 232, 250));
+}
+
+.navbar ul{
+    background: linear-gradient(to top right,
+    rgb(246, 143, 164),
+    rgb(255, 206, 177));    
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+}
+
+.navbar ul li{
+    padding: 1rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.navbar ul a{
+    text-decoration: none;
+    color: rgb(5, 9, 65);
+    font-weight: 700;
+}
+
+.score{
+    color: rgb(5, 9, 65);
+    background: linear-gradient(to bottom right,
+    rgb(246, 143, 164),
+    rgb(202, 232, 250));    
+    backdrop-filter: blur(0.2rem);
+    display: flex;
+    height: 20vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.score h2{
+    font-size: 30px;
+}
+
+.score p{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.intro{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(5, 9, 65);
+    transition: opacity 0.5s ease;
+    margin-top: 3rem;
+}
+
+.intro h1{
+    font-size: 50px;
+    color: rgb(5, 9, 65);
+}
+
+.intro button, .match button{
+    width: 150px;
+    height: 50px;
+    background: none;
+    border:none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background: rgb(45, 117, 96);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.match{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease 0.5s;
+}
+
+.winner{
+    color: rgb(5, 9, 65);
+    font-size: 50px;
+    text-align: center;
+    margin: 5px;
+}
+
+.hands, .options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player-hand{
+    transform: rotateY(180deg);
+}
+
+div.fadeOut{
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.footer{
+    background: linear-gradient(to top right,
+    rgb(246, 143, 164),
+    rgb(255, 206, 177));    
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    padding: 8px;
+    color: rgb(5, 9, 65);
+    font-size: 20px;
+    font-weight: 700;
+    position: static;
+    bottom: 0;
+    width: 100%;
+}
