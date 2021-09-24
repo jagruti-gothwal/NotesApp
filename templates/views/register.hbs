@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <title>i Notes</title>
+</head>
+
+<body>
+    
+    {{>navbar}}
+
+        <section class="login">
+            <form action="" class="login-form">
+            <h1>Login Now</h1>
+                <input type="name" id="name" placeholder="Full Name" autocomplete="off" />
+                <input type="email" id="email" placeholder="E-mail" autocomplete="off" />
+                <input type="password" id="password" placeholder="Password" autocomplete="off">
+                <button class="submit" type="submit">Submit</button>
+                <p>Already have an account <span><a href="/login">Login Now </a></span></p>
+            </form>
+        </section>
+        
+{{>footer}}
+
+</body>
+
+</html>

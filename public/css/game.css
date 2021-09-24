@@ -136,3 +136,66 @@ div.fadeIn{
     bottom: 0;
     width: 100%;
 }
+
+
+/* Smartphones (portrait and landscape) ---------- */
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .intro h1{
+        font-size: 38px;
+    }
+    .navbar ul{
+        display: block;
+        min-width: 100vw;
+        height: 100%;
+    }
+    
+    .footer{
+        position: static;
+        bottom: 0%;
+        width: 125vw;
+    }
+    body{
+        min-width: 130vw;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 765px){
+    .navbar ul{
+        display: block;
+        min-width: 100vw;
+    }
+  
+    .footer{
+        position: static;
+        bottom: 0%;
+        min-width: 100vw;
+    }
+    .match{
+        position: absolute;
+        top: 110%;
+        left: 50%;
+    }
+    body{
+        min-width: 120vw;
+    }
+}
+
+/* Tablets, iPads (portrait and landscape) ---------- */
+@media screen and (min-width: 766px) and (max-width: 1024px){
+    
+    .navbar ul{
+        display: block;
+        min-width: 100vw;
+    }
+   
+    .footer{
+        position: static;
+        bottom: 0%;
+        min-width: 100vw;
+    }
+    .match{
+        position: absolute;
+        top: 110%;
+        left: 50%;
+    }
+}
