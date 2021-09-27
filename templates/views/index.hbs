@@ -15,9 +15,9 @@
   <section class="main">
     <section class="left">
       <h1>Notes</h1>
-      <form action="" class="form">
-        <input type="text" id="title" placeholder="Title" autocomplete="off" />
-        <textarea name="description" id="description" placeholder="Description" autocomplete="off"></textarea>
+      <form action="/notes" class="form" method="GET">
+        <input type="text" name="title" id="title" placeholder="Title" autocomplete="off" required/>
+        <textarea type="text" name="description" id="description" placeholder="Description" autocomplete="off" required></textarea>
         <button class="submit" type="submit">Submit</button>
       </form>
     </section>
@@ -28,7 +28,6 @@
   </section>
 
 {{>footer}}
-
 </body>
 
 </html>

@@ -13,6 +13,7 @@ section{
     background: linear-gradient(to top right,
     rgb(246, 229, 233),
     rgb(202, 232, 250));
+    min-width: 100vh;
 }
 
 .navbar ul{
@@ -50,4 +51,48 @@ section{
     position: static;
     bottom: 0;
     width: 100%;
+}
+
+
+/* Smartphones (portrait and landscape) ---------- */
+@media screen and (min-width: 320px) and (max-width: 480px){
+    
+    .navbar ul{
+        display: block;
+        width: 100vh;
+    }
+    
+    .footer{
+        position: static;
+        bottom: 0%;
+        width: 100vh;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 765px){
+    .navbar ul{
+        display: block;
+        min-width: 100vw;
+    }
+  
+    .footer{
+        position: static;
+        bottom: 0%;
+        min-width: 100vw;
+    }
+}
+
+/* Tablets, iPads (portrait and landscape) ---------- */
+@media screen and (min-width: 766px) and (max-width: 1024px){
+    
+    .navbar ul{
+        display: block;
+        min-width: 100vw;
+    }
+   
+    .footer{
+        position: static;
+        bottom: 0%;
+        min-width: 100vw;
+    }
 }
