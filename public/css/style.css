@@ -77,7 +77,7 @@ h1{
     rgb(202, 232, 250));
     border: 1px solid grey;
     font-size: 17px;
-    padding-left: 20px;
+    padding: 8px;
 }
 
 .submit{

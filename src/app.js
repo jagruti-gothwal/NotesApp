@@ -27,6 +27,11 @@ app.get("/register", (req, res) => {
     res.render('register')
 })
 
+app.post("/notes", (req, res) => {
+    res.render('notes')
+})
+
+
 app.get("/notes", (req, res) => {
     res.render('notes')
 })

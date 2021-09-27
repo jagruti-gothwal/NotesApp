@@ -8,12 +8,15 @@
 }
 
 section{
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Eczar', serif;
     background: linear-gradient(to top right,
     rgb(246, 229, 233),
     rgb(202, 232, 250));
     min-width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar ul{
@@ -37,6 +40,35 @@ section{
     font-weight: 700;
 }
 
+.table{
+    padding: 8px;
+}
+
+th, td{
+    padding: 10px 100px;
+    text-align: center;
+}
+
+#tableBody button{
+    height: 2rem;
+    width: 5rem;
+    outline: none;
+    border-radius: 2px;
+    margin: 3px;
+    background: rgb(92, 92, 92);
+    border: 1px solid rgb(104, 104, 104);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+table th{
+    background: linear-gradient(to right top, rgb(190, 190, 190),rgb(255, 229, 229));
+}
+
+table td{
+    background: linear-gradient(to right top, rgb(190, 190, 190),rgb(255, 229, 229));
+}
 .footer{
     background: linear-gradient(to top right,
     rgb(246, 143, 164),
@@ -67,6 +99,14 @@ section{
         bottom: 0%;
         width: 100vh;
     }
+    .table{
+        padding: 2px;
+    }
+    
+    th, td{
+        padding: 3px 25px;
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 480px) and (max-width: 765px){
@@ -79,6 +119,14 @@ section{
         position: static;
         bottom: 0%;
         min-width: 100vw;
+    }
+    .table{
+        padding: 2px;
+    }
+    
+    th, td{
+        padding: 3px 25px;
+        text-align: center;
     }
 }
 
@@ -94,5 +142,13 @@ section{
         position: static;
         bottom: 0%;
         min-width: 100vw;
+    }
+    .table{
+        padding: 4px;
+    }
+    
+    th, td{
+        padding: 5px 50px;
+        text-align: center;
     }
 }
