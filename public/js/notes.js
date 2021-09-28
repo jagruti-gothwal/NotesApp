@@ -1,4 +1,5 @@
 let tableBody = document.getElementById('tableBody');
+let clearStorage =document.getElementById('clearStorage');
 function update(){
     let str ="";
     if (localStorage.getItem('itemsJson')!=null) {
@@ -10,7 +11,7 @@ function update(){
     <th scope="row">${index+1}</th>
     <td>${element[0]}</td>
     <td>${element[1]}</td>
-    <td><button id="dBtn" onclick="deleted(${index});">Delete</button>  <button id="eBtn">Edit</button></td>
+    <td><button id="dBtn" onclick="deleted(${index});">Delete</button> </td>
     </tr>`;
 });
 }
@@ -26,3 +27,15 @@ function deleted(itemIndex){
     localStorage.setItem('itemsJson', JSON.stringify(itemsJson))
     update();
 }
+
+clearStorage.addEventListener('click', ()=>{
+    if (confirm("Are you sure you want to delete this note!")) {
+        console.log("yes");
+        // TODO: Create a form and use post request to submit a form
+        localStorage.clear();
+      }
+      else {
+        console.log("no");
+      }
+    update();
+})

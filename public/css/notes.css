@@ -49,7 +49,7 @@ th, td{
     text-align: center;
 }
 
-#tableBody button{
+#tableBody button, .items button{
     height: 2rem;
     width: 5rem;
     outline: none;

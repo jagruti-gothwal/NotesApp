@@ -11,7 +11,9 @@
 <body>
     {{>navbar}}
         <section>
+
             <div class="items">
+            <button onclick="clearStorage();" id="clearStorage">Clear</button>
             <table class="table" border="0">
                 <thead class="tHead">
                     <th scope="col">SNo</th>
@@ -29,6 +31,7 @@
                 </tbody>
             </table>
             </div>
+            
         </section>
     {{>footer}}
 </body>    <script type="text/javascript"  src="./js/notes.js"></script>
