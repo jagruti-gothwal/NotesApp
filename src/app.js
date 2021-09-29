@@ -8,7 +8,6 @@ const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
 const partials_path = path.join(__dirname, "../templates/partials");
 
-
 app.set('view engine', 'hbs')
 app.set('views', template_path);
 hbs.registerPartials(partials_path);
@@ -27,6 +26,10 @@ app.get("/register", (req, res) => {
     res.render('register')
 })
 
+app.post("/notes", (req, res) => {
+    res.render('notes')
+})
+
 app.get("/notes", (req, res) => {
     res.render('notes')
 })
@@ -42,7 +45,6 @@ app.get("/contact", (req, res) => {
 app.get("/error", (req, res) => {
     res.send('error')
 })
-
 
 app.listen(port, () => {
     console.log(`Server is listening at ${port}`);

@@ -1,46 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Eczar', serif;
 }
 
-.main{
+.main {
     margin-top: 2rem 1rem;
     display: flex;
     background: linear-gradient(to top right,
-    rgb(246, 229, 233),
-    rgb(202, 232, 250));
+            rgb(246, 229, 233),
+            rgb(202, 232, 250));
     height: 100%;
 }
-.navbar ul{
+
+.navbar ul {
     background: linear-gradient(to top right,
-    rgb(246, 143, 164),
-    rgb(255, 206, 177));    
+            rgb(246, 143, 164),
+            rgb(255, 206, 177));
     display: flex;
     /* text-align: center; */
     justify-content: center;
 }
 
-.navbar ul li{
+.navbar ul li {
     padding: 1rem;
     list-style: none;
     font-size: 1.5rem;
 }
 
-.navbar ul a{
+.navbar ul a {
     text-decoration: none;
     color: rgb(5, 9, 65);
     font-weight: 700;
 }
 
-h1{
+h1 {
     color: rgb(5, 9, 65);
     font-size: 30px;
 }
-.left, .right{
+
+.left,
+.right {
     min-height: 100vh;
     width: 50%;
     display: flex;
@@ -51,10 +54,10 @@ h1{
 
 
 
-.form{
+.form {
     background: linear-gradient(to top right,
-    rgb(250, 190, 202),
-    rgb(248, 197, 167));
+            rgb(250, 190, 202),
+            rgb(248, 197, 167));
     min-height: 80vh;
     width: 80%;
     display: flex;
@@ -66,21 +69,22 @@ h1{
     margin-top: 5px;
 }
 
-#title, #description{
+#title,
+#description {
     height: 3rem;
     width: 30rem;
     outline: none;
     border-radius: 0.6rem;
     margin: 10px 30px;
     background: linear-gradient(to top right,
-    rgb(246, 229, 233),
-    rgb(202, 232, 250));
+            rgb(246, 229, 233),
+            rgb(202, 232, 250));
     border: 1px solid grey;
     font-size: 17px;
-    padding-left: 20px;
+    padding: 8px;
 }
 
-.submit{
+.submit {
     height: 3rem;
     width: 30rem;
     outline: none;
@@ -93,15 +97,15 @@ h1{
     cursor: pointer;
 }
 
-.right img{
+.right img {
     min-height: 80vh;
     width: 80%;
 }
 
-.footer{
+.footer {
     background: linear-gradient(to top right,
-    rgb(246, 143, 164),
-    rgb(255, 206, 177));    
+            rgb(246, 143, 164),
+            rgb(255, 206, 177));
     display: flex;
     /* text-align: center; */
     justify-content: center;
@@ -115,28 +119,31 @@ h1{
 }
 
 /* Smartphones (portrait and landscape) ---------- */
-@media screen and (min-width: 320px) and (max-width: 480px){
-    
-    .main{
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    .main {
         width: 100vh;
         min-height: 175%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .navbar ul{
+
+    .navbar ul {
         display: block;
         width: 100vh;
     }
-    .form{
+
+    .form {
         width: 90%;
     }
-    .right{
+
+    .right {
         display: none;
-        
+
     }
-    
-    .left{
+
+    .left {
         min-height: 100vh;
         width: 100%;
         display: flex;
@@ -144,37 +151,44 @@ h1{
         align-items: center;
         justify-content: space-evenly;
     }
-    .footer{
+
+    .footer {
         position: static;
         bottom: 0%;
         width: 100vh;
     }
-    #title, #description, .submit{
+
+    #title,
+    #description,
+    .submit {
         width: 90%;
     }
 }
 
-@media screen and (min-width: 480px) and (max-width: 765px){
-    .main{
+@media screen and (min-width: 480px) and (max-width: 765px) {
+    .main {
         min-width: 100vw;
         max-height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .navbar ul{
+
+    .navbar ul {
         display: block;
         min-width: 100vw;
     }
-    .form{
+
+    .form {
         min-width: 90%;
     }
-    .right{
+
+    .right {
         display: none;
-        
+
     }
-    
-    .left{
+
+    .left {
         min-height: 100vh;
         min-width: 100%;
         display: flex;
@@ -182,38 +196,45 @@ h1{
         align-items: center;
         justify-content: space-evenly;
     }
-    .footer{
+
+    .footer {
         position: static;
         bottom: 0%;
         min-width: 100vw;
     }
-    #title, #description, .submit{
+
+    #title,
+    #description,
+    .submit {
         width: 90%;
     }
 }
 
 /* Tablets, iPads (portrait and landscape) ---------- */
-@media screen and (min-width: 768px) and (max-width: 1024px){
-    .main{
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .main {
         max-width: 100vw;
         max-height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .navbar ul{
+
+    .navbar ul {
         display: block;
         max-width: 100vw;
     }
-    .form{
+
+    .form {
         min-width: 90vh;
     }
-    .right{
+
+    .right {
         display: none;
-        
+
     }
-    
-    .left{
+
+    .left {
         max-height: 100vh;
         max-width: 100%;
         display: flex;
@@ -221,12 +242,16 @@ h1{
         align-items: center;
         justify-content: space-evenly;
     }
-    .footer{
+
+    .footer {
         position: static;
         bottom: 0%;
         max-width: 100vw;
     }
-    #title, #description, .submit{
+
+    #title,
+    #description,
+    .submit {
         width: 90%;
     }
 }

@@ -15,10 +15,10 @@
   <section class="main">
     <section class="left">
       <h1>Notes</h1>
-      <form action="/notes" class="form" method="GET">
+      <form action="/notes" class="form" method="POST">
         <input type="text" name="title" id="title" placeholder="Title" autocomplete="off" required/>
         <textarea type="text" name="description" id="description" placeholder="Description" autocomplete="off" required></textarea>
-        <button class="submit" type="submit">Submit</button>
+        <button class="submit" id="addNote" type="submit" onclick="handleSubmit()">Add Note</button>
       </form>
     </section>
 
@@ -26,8 +26,8 @@
       <img src="./images/right.png" alt="" />
     </section>
   </section>
-
 {{>footer}}
+<script type="text/javascript" src="./js/index.js"></script>
 </body>
 
 </html>
