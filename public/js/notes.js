@@ -1,4 +1,5 @@
 let tableBody = document.getElementById('tableBody');
+
 function update() {
     let str = "";
     if (localStorage.getItem('itemsJson') != null) {
@@ -13,6 +14,17 @@ function update() {
     <td><button id="dBtn" onclick="deleted(${index});">Delete</button>  <button id="eBtn">Edit</button></td>
     </tr>`;
         });
+        itemsJson.forEach((element, index) => {
+            str += `
+            <tr>
+            <th scope="row">${index + 1}</th>
+            <td>${element[0]}</td>
+            <td>${element[1]}</td>
+            <td><button id="dBtn">Delete</button>  <button id="eBtn">Edit</button></td>
+            </tr>`;
+        });
+    } else {
+        console.log("Error in adding notes");
     }
     tableBody.innerHTML = str;
 }

@@ -1,4 +1,3 @@
-
 const addNote = document.getElementById('addNote');
 addNote.addEventListener('click', () => {
     console.log("Updating...");

@@ -46,7 +46,6 @@ app.get("/error", (req, res) => {
     res.send('error')
 })
 
-
 app.listen(port, () => {
     console.log(`Server is listening at ${port}`);
 })
