@@ -4,11 +4,11 @@ addNote.addEventListener('click', () => {
     const tit = document.getElementById('title').value;
     const desc = document.getElementById('description').value;
 
-    if(localStorage.getItem('itemsJson') == null){
+    if (localStorage.getItem('itemsJson') == null) {
         itemJsonArray = [];
         itemJsonArray.push([tit, desc]);
         localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
-    }else{
+    } else {
         itemJsonArrayStr = localStorage.getItem('itemsJson');
         itemJsonArray = JSON.parse(itemJsonArrayStr);
         itemJsonArray.push([tit, desc]);

@@ -10,7 +10,7 @@ const game = () => {
 
         playBtn.addEventListener('click', () => {
             introScreen.classList.add("fadeOut");
-            console.log(  introScreen.classList.add("fadeOut") );
+            console.log(introScreen.classList.add("fadeOut"));
             match.classList.add("fadeIn");
         });
     };
@@ -22,10 +22,10 @@ const game = () => {
         //computer option
         const computerOptions = ['rock', 'paper', 'scissors'];
 
-        options.forEach(option =>{
-            option.addEventListener('click' ,function(){
+        options.forEach(option => {
+            option.addEventListener('click', function () {
                 //Computerchoice
-                const computerNumber = Math.floor(Math.random()*3);
+                const computerNumber = Math.floor(Math.random() * 3);
                 const computerChoice = computerOptions[computerNumber];
                 //call compare hands
                 compareHands(this.textContent, computerChoice);
@@ -48,70 +48,69 @@ const game = () => {
     const compareHands = (playerChoice, computerChoice) => {
         const winner = document.querySelector('.winner');
         //checking for a tie
-        if(playerChoice === computerChoice)
-        {
+        if (playerChoice === computerChoice) {
             winner.textContent = "It's a tie";
             return;
         }
         //checking for rock
-        if(playerChoice === 'rock'){
-            if(computerChoice === 'scissors'){
-            winner.textContent = "Player Wins";
-            pScore++;
-            updateScore();
-            return;
-        }else{
-            winner.textContent = "Compter Wins";
-            cScore++;
-            updateScore();
-            return;
+        if (playerChoice === 'rock') {
+            if (computerChoice === 'scissors') {
+                winner.textContent = "Player Wins";
+                pScore++;
+                updateScore();
+                return;
+            } else {
+                winner.textContent = "Compter Wins";
+                cScore++;
+                updateScore();
+                return;
+            }
         }
-    }
-    //checking for paper
-    if(playerChoice === 'paper'){
-        if(computerChoice === 'scissors'){
-        winner.textContent = "Player Wins";
-        pScore++;
-        updateScore();
-        return;
-    }else{
-        winner.textContent = "Compter Wins";
-        cScore++;
-        updateScore();
-        return;
-    }
-}
- //checking for paper
-    if(playerChoice === 'paper'){
-        if(computerChoice === 'scissors'){
-        winner.textContent = "Player Wins";
-        pScore++;
-        updateScore();
-        return;
-    }else{
-        winner.textContent = "Computer Wins";
-        cScore++;
-        updateScore();
-        return;
-    }
-}
-     //checking for scissors
-     if(playerChoice === 'scissors'){
-        if(computerChoice === 'rock'){
-        winner.textContent = "Computer Wins";
-        cScore++;
-        updateScore();
-        return;
-    }else{
-        winner.textContent = "Player Wins";
-        pScore++;
-        updateScore();
-        return;
-    }
-}
+        //checking for paper
+        if (playerChoice === 'paper') {
+            if (computerChoice === 'scissors') {
+                winner.textContent = "Player Wins";
+                pScore++;
+                updateScore();
+                return;
+            } else {
+                winner.textContent = "Compter Wins";
+                cScore++;
+                updateScore();
+                return;
+            }
+        }
+        //checking for paper
+        if (playerChoice === 'paper') {
+            if (computerChoice === 'scissors') {
+                winner.textContent = "Player Wins";
+                pScore++;
+                updateScore();
+                return;
+            } else {
+                winner.textContent = "Computer Wins";
+                cScore++;
+                updateScore();
+                return;
+            }
+        }
+        //checking for scissors
+        if (playerChoice === 'scissors') {
+            if (computerChoice === 'rock') {
+                winner.textContent = "Computer Wins";
+                cScore++;
+                updateScore();
+                return;
+            } else {
+                winner.textContent = "Player Wins";
+                pScore++;
+                updateScore();
+                return;
+            }
+        }
 
 
-}
+    }
     //Is call all the inner function
     startGame();
     playMatch();
