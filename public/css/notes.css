@@ -50,7 +50,7 @@ td {
     text-align: center;
 }
 
-#tableBody button,
+#tableBody button, 
 .items button {
     height: 2rem;
     width: 5rem;
@@ -62,8 +62,6 @@ td {
     color: white;
     font-size: 20px;
     cursor: pointer;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .btn_head {

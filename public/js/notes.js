@@ -1,40 +1,43 @@
 let tableBody = document.getElementById("tableBody");
-let clearStorage = document.getElementById("clearStorage");
-function update() {
+
+// push the data in localstorage
+function updateNote() {
   let str = "";
   if (localStorage.getItem("itemsJson") != null) {
     itemsJson = JSON.parse(localStorage.getItem("itemsJson"));
-
     itemsJson.forEach((element, index) => {
       str += `
-    <tr>
-    <th scope="row">${index + 1}</th>
-    <td>${element[0]}</td>
-    <td>${element[1]}</td>
-    <td><button id="dBtn" onclick="deleted(${index});">Delete</button> </td>
-    </tr>`;
+            <tr>
+            <th scope="row">${index + 1}</th>
+            <td>${element[0]}</td>
+            <td>${element[1]}</td>
+            <td><button id="dBtn" onclick="deleteNote(${index});">Delete</button></td>
+            </tr>`;
     });
+  } else {
+    console.log("Error in adding notes");
   }
   tableBody.innerHTML = str;
 }
-update();
+updateNote(); //calling update to update table
 
-function deleted(itemIndex) {
+//deletes the data from table and localstorage
+function deleteNote(itemIndex) {
   console.log("button clicked", itemIndex);
   itemsJson = JSON.parse(localStorage.getItem("itemsJson"));
   //Delete
   itemsJson.splice(itemIndex, 1);
   localStorage.setItem("itemsJson", JSON.stringify(itemsJson));
-  update();
+  updateNote();
 }
 
+//Clear  LocalStorage
 clearStorage.addEventListener("click", () => {
   if (confirm("Are you sure you want to delete this note!")) {
     console.log("yes");
-    // TODO: Create a form and use post request to submit a form
     localStorage.clear();
   } else {
     console.log("no");
   }
-  update();
+  updateNote();
 });
