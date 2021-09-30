@@ -1,55 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
 
-*{
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
     font-family: 'Eczar', serif;
 }
 
-section{
+section {
     min-height: 100vh;
     font-family: 'Eczar', serif;
     background: linear-gradient(to top right,
-    rgb(246, 229, 233),
-    rgb(202, 232, 250));
+            rgb(246, 229, 233),
+            rgb(202, 232, 250));
     min-width: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.navbar ul{
+.navbar ul {
     background: linear-gradient(to top right,
-    rgb(246, 143, 164),
-    rgb(255, 206, 177));    
+            rgb(246, 143, 164),
+            rgb(255, 206, 177));
     display: flex;
     /* text-align: center; */
     justify-content: center;
 }
 
-.navbar ul li{
+.navbar ul li {
     padding: 1rem;
     list-style: none;
     font-size: 1.5rem;
 }
 
-.navbar ul a{
+.navbar ul a {
     text-decoration: none;
     color: rgb(5, 9, 65);
     font-weight: 700;
 }
 
-.table{
+.table {
     padding: 8px;
 }
 
-th, td{
+th,
+td {
     padding: 10px 100px;
     text-align: center;
 }
 
-#tableBody button{
+#tableBody button,
+.items button {
     height: 2rem;
     width: 5rem;
     outline: none;
@@ -60,19 +62,29 @@ th, td{
     color: white;
     font-size: 20px;
     cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-table th{
-    background: linear-gradient(to right top, rgb(190, 190, 190),rgb(255, 229, 229));
+.btn_head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
-table td{
-    background: linear-gradient(to right top, rgb(190, 190, 190),rgb(255, 229, 229));
+table th {
+    background: linear-gradient(to right top, rgb(190, 190, 190), rgb(255, 229, 229));
 }
-.footer{
+
+table td {
+    background: linear-gradient(to right top, rgb(190, 190, 190), rgb(255, 229, 229));
+}
+
+.footer {
     background: linear-gradient(to top right,
-    rgb(246, 143, 164),
-    rgb(255, 206, 177));    
+            rgb(246, 143, 164),
+            rgb(255, 206, 177));
     display: flex;
     /* text-align: center; */
     justify-content: center;
@@ -87,67 +99,73 @@ table td{
 
 
 /* Smartphones (portrait and landscape) ---------- */
-@media screen and (min-width: 320px) and (max-width: 480px){
-    
-    .navbar ul{
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    .navbar ul {
         display: block;
         width: 100vh;
     }
-    
-    .footer{
+
+    .footer {
         position: static;
         bottom: 0%;
         width: 100vh;
     }
-    .table{
+
+    .table {
         padding: 2px;
     }
-    
-    th, td{
+
+    th,
+    td {
         padding: 3px 25px;
         text-align: center;
     }
 }
 
-@media screen and (min-width: 480px) and (max-width: 765px){
-    .navbar ul{
+@media screen and (min-width: 480px) and (max-width: 765px) {
+    .navbar ul {
         display: block;
         min-width: 100vw;
     }
-  
-    .footer{
+
+    .footer {
         position: static;
         bottom: 0%;
         min-width: 100vw;
     }
-    .table{
+
+    .table {
         padding: 2px;
     }
-    
-    th, td{
+
+    th,
+    td {
         padding: 3px 25px;
         text-align: center;
     }
 }
 
 /* Tablets, iPads (portrait and landscape) ---------- */
-@media screen and (min-width: 766px) and (max-width: 1024px){
-    
-    .navbar ul{
+@media screen and (min-width: 766px) and (max-width: 1024px) {
+
+    .navbar ul {
         display: block;
         min-width: 100vw;
     }
-   
-    .footer{
+
+    .footer {
         position: static;
         bottom: 0%;
         min-width: 100vw;
     }
-    .table{
+
+    .table {
         padding: 4px;
     }
-    
-    th, td{
+
+    th,
+    td {
         padding: 5px 50px;
         text-align: center;
     }
