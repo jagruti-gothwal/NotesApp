@@ -1,7 +1,7 @@
 let tableBody = document.getElementById("tableBody");
 
-// updates the data in localstorage
-function update() {
+// push the data in localstorage
+function updateNote() {
   let str = "";
   if (localStorage.getItem("itemsJson") != null) {
     itemsJson = JSON.parse(localStorage.getItem("itemsJson"));
@@ -11,7 +11,7 @@ function update() {
             <th scope="row">${index + 1}</th>
             <td>${element[0]}</td>
             <td>${element[1]}</td>
-            <td><button id="dBtn" onclick="deleted(${index});">Delete</button></td>
+            <td><button id="dBtn" onclick="deleteNote(${index});">Delete</button></td>
             </tr>`;
     });
   } else {
@@ -19,14 +19,14 @@ function update() {
   }
   tableBody.innerHTML = str;
 }
-update(); //calling update to update table
+updateNote(); //calling update to update table
 
 //deletes the data from table and localstorage
-function deleted(itemIndex) {
+function deleteNote(itemIndex) {
   console.log("button clicked", itemIndex);
   itemsJson = JSON.parse(localStorage.getItem("itemsJson"));
   //Delete
   itemsJson.splice(itemIndex, 1);
   localStorage.setItem("itemsJson", JSON.stringify(itemsJson));
-  update();
+  updateNote();
 }
