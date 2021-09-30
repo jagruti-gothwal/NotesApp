@@ -1,5 +1,6 @@
 let tableBody = document.getElementById("tableBody");
 
+// updates the data in localstorage
 function update() {
   let str = "";
   if (localStorage.getItem("itemsJson") != null) {
@@ -18,8 +19,9 @@ function update() {
   }
   tableBody.innerHTML = str;
 }
-update();
+update(); //calling update to update table
 
+//deletes the data from table and localstorage
 function deleted(itemIndex) {
   console.log("button clicked", itemIndex);
   itemsJson = JSON.parse(localStorage.getItem("itemsJson"));
