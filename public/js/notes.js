@@ -1,7 +1,7 @@
 let tableBody = document.getElementById("tableBody");
 
 // push the data in localstorage
-function updateNote() {
+function fetchNote() {
   let str = "";
   if (localStorage.getItem("itemsJson") != null) {
     itemsJson = JSON.parse(localStorage.getItem("itemsJson"));
@@ -19,7 +19,7 @@ function updateNote() {
   }
   tableBody.innerHTML = str;
 }
-updateNote(); //calling update to update table
+fetchNote(); //calling update to update table
 
 //deletes the data from table and localstorage
 function deleteNote(itemIndex) {
@@ -28,7 +28,7 @@ function deleteNote(itemIndex) {
   //Delete
   itemsJson.splice(itemIndex, 1);
   localStorage.setItem("itemsJson", JSON.stringify(itemsJson));
-  updateNote();
+  fetchNote();
 }
 
 //Clear  LocalStorage
@@ -39,5 +39,5 @@ clearStorage.addEventListener("click", () => {
   } else {
     console.log("no");
   }
-  updateNote();
+  fetchNote();
 });
