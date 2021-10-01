@@ -30,3 +30,14 @@ function deleteNote(itemIndex) {
   localStorage.setItem("itemsJson", JSON.stringify(itemsJson));
   updateNote();
 }
+
+//Clear  LocalStorage
+clearStorage.addEventListener("click", () => {
+  if (confirm("Are you sure you want to delete this note!")) {
+    console.log("yes");
+    localStorage.clear();
+  } else {
+    console.log("no");
+  }
+  updateNote();
+});

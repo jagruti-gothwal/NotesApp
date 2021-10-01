@@ -50,7 +50,8 @@ td {
     text-align: center;
 }
 
-#tableBody button {
+#tableBody button, 
+.items button {
     height: 2rem;
     width: 5rem;
     outline: none;
@@ -61,6 +62,13 @@ td {
     color: white;
     font-size: 20px;
     cursor: pointer;
+}
+
+.btn_head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 table th {

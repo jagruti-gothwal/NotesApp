@@ -1,8 +1,8 @@
-const express = require('express');
-const path = require('path');
+const express = require("express");
+const path = require("path");
 const app = express();
 const port = 7000;
-const hbs = require('hbs');
+const hbs = require("hbs");
 
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
@@ -15,37 +15,37 @@ hbs.registerPartials(partials_path);
 app.use(express.static(static_path));
 
 app.get("", (req, res) => {
-    res.render('index')
-})
+  res.render("index");
+});
 
 app.get("/login", (req, res) => {
-    res.render('login')
-})
+  res.render("login");
+});
 
 app.get("/register", (req, res) => {
-    res.render('register')
-})
+  res.render("register");
+});
 
 app.post("/notes", (req, res) => {
-    res.render('notes')
-})
+  res.render("notes");
+});
 
 app.get("/notes", (req, res) => {
-    res.render('notes')
-})
+  res.render("notes");
+});
 
 app.get("/game", (req, res) => {
-    res.render('game')
-})
+  res.render("game");
+});
 
 app.get("/contact", (req, res) => {
-    res.render('contact')
-})
+  res.render("contact");
+});
 
 app.get("/error", (req, res) => {
-    res.send('error')
-})
+  res.send("error");
+});
 
 app.listen(port, () => {
-    console.log(`Server is listening at ${port}`);
-})
+  console.log(`Server is listening at ${port}`);
+});
