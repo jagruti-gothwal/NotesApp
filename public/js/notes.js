@@ -1,6 +1,6 @@
 let tableBody = document.getElementById("tableBody");
 
-// push the data in localstorage
+// pulling the data from localstorage
 function fetchNotes() {
   let str = "";
   if (localStorage.getItem("itemsJson") != null) {
@@ -11,7 +11,7 @@ function fetchNotes() {
             <th scope="row">${index + 1}</th>
             <td>${element[0]}</td>
             <td>${element[1]}</td>
-            <td><button id="dBtn" onclick="deleteNotes(${index});">Delete</button></td>
+            <td><button id="deleteBtn" onclick="deleteNote(${index});">Delete</button></td>
             </tr>`;
     });
   } else {
@@ -19,10 +19,10 @@ function fetchNotes() {
   }
   tableBody.innerHTML = str;
 }
-fetchNotes(); //calling update to update table
+fetchNotes(); 
 
 //deletes the data from table and localstorage
-function deleteNotes(itemIndex) {
+function deleteNote(itemIndex) {
   console.log("button clicked", itemIndex);
   itemsJson = JSON.parse(localStorage.getItem("itemsJson"));
   //Delete
@@ -31,7 +31,7 @@ function deleteNotes(itemIndex) {
   fetchNotes();
 }
 
-//Clear  LocalStorage
+//Clear the data from table and localstorage
 clearStorage.addEventListener("click", () => {
   if (confirm("Are you sure you want to delete this note!")) {
     console.log("yes");
