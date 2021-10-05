@@ -13,17 +13,17 @@
     {{>navbar}}
 
         <section class="login">
-            <form action="" class="login-form">
+            {{!-- <form class="login-form"> --}}
             <h1>Login Now</h1>
-                <input type="email" id="email" placeholder="E-mail" autocomplete="off" />
-                <input type="password" id="password" placeholder="Password" autocomplete="off">
-                <button class="submit" type="submit">Submit</button>
+                <input type="email" id="email" placeholder="E-mail" autocomplete="off" required/>
+                <input type="password" id="password" placeholder="Password" autocomplete="off" required/>
+                <button id="submit" type="submit">Submit</button>
                 <p>Don't have an account <span><a href="/register">Register Now </a></span></p>
-            </form>
+            {{!-- </form> --}}
         </section>
         
 {{>footer}}
-
+<script type="text/javascript" src="./js/login.js"></script>
 </body>
 
 </html>

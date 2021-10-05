@@ -1,282 +1,353 @@
 @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Eczar', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Crete Round', serif;
 }
 
 body {
-    background: linear-gradient(to top right,
-            rgb(246, 229, 233),
-            rgb(202, 232, 250));
+  background-image: url('/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 1400px 800px;
 }
-
 .navbar ul {
-    background: linear-gradient(to top right,
-            rgb(246, 143, 164),
-            rgb(255, 206, 177));
-    display: flex;
-    /* text-align: center; */
-    justify-content: center;
+  display: flex;
+  /* text-align: center; */
+  justify-content: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(230, 230, 230, 0.137),
+    rgba(202, 202, 202, 0)
+  );
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    0 0 42px rgb(77, 77, 77), 0 0 82px rgb(0, 0, 0);
 }
 
 .navbar ul li {
-    padding: 1rem;
-    list-style: none;
-    font-size: 1.5rem;
+  padding: 1rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+.navbar ul li:hover {
+  padding: 1rem;
+  list-style: none;
+  font-size: 1.5rem;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    0 0 42px rgb(0, 17, 255), 0 0 82px rgb(0, 17, 255);
 }
 
 .navbar ul a {
-    text-decoration: none;
-    color: rgb(5, 9, 65);
-    font-weight: 700;
+  text-decoration: none;
+  color: rgb(5, 9, 65);
+  font-weight: 700;
 }
 
 .login {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-
-
 .login-form {
-    background: linear-gradient(to top right,
-            rgb(250, 190, 202),
-            rgb(248, 197, 167));
-    min-height: 80vh;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(2rem);
-    border-radius: 5px;
+  min-height: 80vh;
+  width: 80%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(189, 189, 189, 0.137),
+    rgba(202, 202, 202, 0)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  margin-top: 5px;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
 }
 
 .login-form h1 {
-    font-size: 2rem;
-    margin: 1rem;
-    color: rgb(5, 9, 65);
+  font-size: 2rem;
+  margin: 1rem;
+  color: rgb(5, 9, 65);
 }
 
 .login-form p {
-    color: rgb(5, 9, 65);
-    font-size: 18px;
+  color: rgb(5, 9, 65);
+  font-size: 18px;
 }
 
 .login-form span a {
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 #name,
 #email,
 #password {
-    height: 3rem;
-    width: 40rem;
-    outline: none;
-    border-radius: 0.6rem;
-    margin: 10px 30px;
-    background: linear-gradient(to top right,
-            rgb(246, 229, 233),
-            rgb(202, 232, 250));
-    border: 1px solid grey;
-    font-size: 17px;
-    font-family: 'Eczar', serif;
-    padding-left: 20px;
+  height: 3rem;
+  width: 40rem;
+  outline: none;
+  /* border-radius: 0.6rem; */
+  margin: 10px 30px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgb(112, 112, 112);
+  font-size: 17px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.submit {
-    height: 3rem;
-    width: 40rem;
-    outline: none;
-    border-radius: 0.6rem;
-    margin: 30px;
-    background: rgb(92, 92, 92);
-    border: 1px solid grey;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
+#submit {
+  height: 3rem;
+  width: 40rem;
+  outline: none;
+  border-radius: 0.6rem;
+  margin: 30px;
+  background: rgb(92, 92, 92);
+  border: 1px solid grey;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition-duration: 0.7s;
+}
+
+#submit:hover {
+  background: rgb(121, 121, 121);
+  color: white;
 }
 
 .footer {
-    background: linear-gradient(to top right,
-            rgb(246, 143, 164),
-            rgb(255, 206, 177));
+  display: flex;
+  /* text-align: center; */
+  justify-content: center;
+  padding: 8px;
+  color: rgb(5, 9, 65);
+  font-size: 20px;
+  font-weight: 700;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  margin-top: 30px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(230, 230, 230, 0.137),
+    rgba(202, 202, 202, 0)
+  );
+  z-index: 2;
+  backdrop-filter: blur(1rem);
+  position: relative;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    0 0 42px rgb(77, 77, 77), 0 0 82px rgb(0, 0, 0);
+}
+
+@media screen and (min-width: 10px) and (max-width: 479px) {
+  .login {
+    min-height: 100vh;
+  }
+
+  .main {
+    min-width: 100vw;
+    max-height: 100%;
     display: flex;
-    /* text-align: center; */
     justify-content: center;
-    padding: 8px;
-    color: rgb(5, 9, 65);
-    font-size: 20px;
-    font-weight: 700;
+    align-items: center;
+  }
+
+  .navbar ul {
+    display: block;
+    min-width: 100vw;
+  }
+
+  .login-form {
+    min-width: 90%;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .left {
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .footer {
     position: static;
-    bottom: 0;
-    width: 100%;
+    bottom: 0%;
+    min-width: 100vw;
+  }
+
+  #name,
+  #email,
+  #password,
+  #submit {
+    width: 85%;
+  }
 }
 
 /* Smartphones (portrait and landscape) ---------- */
 @media screen and (min-width: 320px) and (max-width: 480px) {
-    .login {
-        min-height: 140vh;
-        width: 100vh;
-    }
+  .login {
+    min-height: 100vh;
+  }
 
-    .body {
-        max-width: 100;
-    }
+  .main {
+    min-width: 100vw;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .main {
-        width: 100vw;
-        min-height: 175%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .navbar ul {
+    display: block;
+    min-width: 100vw;
+  }
 
-    .navbar ul {
-        display: block;
-        width: 100vh;
-    }
+  .login-form {
+    min-width: 90%;
+  }
 
-    .login-form {
-        width: 90%;
-    }
+  .right {
+    display: none;
+  }
 
-    .right {
-        display: none;
-    }
+  .left {
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 
-    .login p {
-        font-size: 30px;
-    }
+  .footer {
+    position: static;
+    bottom: 0%;
+    min-width: 100vw;
+  }
 
-    .left {
-        min-width: 100vw;
-        max-height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footer {
-        position: static;
-        bottom: 0%;
-        width: 100vh;
-    }
-
-    #name,
-    #email,
-    #password,
-    .submit {
-        width: 90%;
-    }
+  #name,
+  #email,
+  #password,
+  #submit {
+    width: 85%;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 765px) {
-    .login {
-        min-height: 125vh;
-    }
+  .login {
+    min-height: 100vh;
+  }
 
-    .main {
-        min-width: 100vw;
-        max-height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .main {
+    min-width: 100vw;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .navbar ul {
-        display: block;
-        min-width: 100vw;
-    }
+  .navbar ul {
+    display: block;
+    min-width: 100vw;
+  }
 
-    .login-form {
-        min-width: 90%;
-    }
+  .login-form {
+    min-width: 90%;
+  }
 
-    .right {
-        display: none;
+  .right {
+    display: none;
+  }
 
-    }
+  .left {
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 
-    .left {
-        min-height: 100vh;
-        min-width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
+  .footer {
+    position: static;
+    bottom: 0%;
+    min-width: 100vw;
+  }
 
-    .footer {
-        position: static;
-        bottom: 0%;
-        min-width: 100vw;
-    }
-
-    #name,
-    #email,
-    #password,
-    .submit {
-        width: 85%;
-    }
+  #name,
+  #email,
+  #password,
+  #submit {
+    width: 85%;
+  }
 }
 
 /* Tablets, iPads (portrait and landscape) ---------- */
 @media screen and (min-width: 766px) and (max-width: 1024px) {
-    .login {
-        min-height: 125vh;
-    }
+  .login {
+    min-height: 100vh;
+  }
 
-    .main {
-        min-width: 100vw;
-        max-height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .main {
+    min-width: 100vw;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .navbar ul {
-        display: block;
-        min-width: 100vw;
-    }
+  .navbar ul {
+    display: block;
+    min-width: 100vw;
+  }
 
-    .login-form {
-        min-width: 90%;
-    }
+  .login-form {
+    min-width: 90%;
+  }
 
-    .right {
-        display: none;
+  .right {
+    display: none;
+  }
 
-    }
+  .left {
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 
-    .left {
-        min-height: 100vh;
-        min-width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
+  .footer {
+    position: static;
+    bottom: 0%;
+    min-width: 100vw;
+  }
 
-    .footer {
-        position: static;
-        bottom: 0%;
-        min-width: 100vw;
-    }
-
-    #name,
-    #email,
-    #password,
-    .submit {
-        min-width: 93%;
-    }
+  #name,
+  #email,
+  #password,
+  #submit {
+    min-width: 93%;
+  }
 }

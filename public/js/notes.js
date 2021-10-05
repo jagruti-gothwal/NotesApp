@@ -19,6 +19,7 @@ function updateNote() {
   }
   tableBody.innerHTML = str;
 }
+
 updateNote(); //calling update to update table
 
 //deletes the data from table and localstorage
@@ -30,3 +31,4 @@ function deleteNote(itemIndex) {
   localStorage.setItem("itemsJson", JSON.stringify(itemsJson));
   updateNote();
 }
+

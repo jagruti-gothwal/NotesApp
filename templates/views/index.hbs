@@ -9,24 +9,40 @@
 </head>
 
 <body>
-  
   {{>navbar}}
-  
   <section class="main">
+  {{!-- <div class="box1">
+    <h2>Note 1</h2>
+  </div>
+   <div class="box2">
+    <h2>Note 2</h2>
+  </div> --}}
+  {{!-- <div class="box3">
+    <p></p>
+  </div>
+   <div class="box4">
+    <p></p>
+  </div> --}}
     <section class="left">
       <h1>Notes</h1>
       <form action="/notes" class="form" method="POST">
         <input type="text" name="title" id="title" placeholder="Title" autocomplete="off" required/>
         <textarea type="text" name="description" id="description" placeholder="Description" autocomplete="off" required></textarea>
-        <button class="submit" id="addNote" type="submit" onclick="handleSubmit()">Add Note</button>
+        <button class="submit" id="addNote" type="submit">Add Note</button>
       </form>
     </section>
-
-    <section class="right">
-      <img src="./images/right.png" alt="" />
+        <section class="right">    
+        <h2>LOGIN AND REGISTRATION</h2>
+        <a href="/login"><button class="login" id="login" type="submit">LOGIN</button></a>
+        <a href="/register"><button class="login" id="login" type="submit">REGISTRATION</button></a>
     </section>
+
+    {{!-- <section class="right">
+      <img src="./images/right.png" alt="" />
+    </section> --}}
   </section>
 {{>footer}}
 <script type="text/javascript" src="./js/index.js"></script>
 </body>
+
 </html>

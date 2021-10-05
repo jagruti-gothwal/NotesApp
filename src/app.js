@@ -34,14 +34,6 @@ app.get("/notes", (req, res) => {
     res.render('notes')
 })
 
-app.get("/game", (req, res) => {
-    res.render('game')
-})
-
-app.get("/contact", (req, res) => {
-    res.render('contact')
-})
-
 app.get("/error", (req, res) => {
     res.send('error')
 })

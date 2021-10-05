@@ -7,34 +7,60 @@
     font-family: 'Eczar', serif;
 }
 
+body{
+    background-image: url("/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 1400px 800px;
+}
+
 section {
     min-height: 100vh;
     font-family: 'Eczar', serif;
-    background: linear-gradient(to top right,
-            rgb(246, 229, 233),
-            rgb(202, 232, 250));
     min-width: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.navbar ul {
-    background: linear-gradient(to top right,
-            rgb(246, 143, 164),
-            rgb(255, 206, 177));
+.navbar ul{
     display: flex;
     /* text-align: center; */
     justify-content: center;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(230, 230, 230, 0.137), 
+        rgba(202, 202, 202, 0));  
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    width: 100%;
+    position: relative;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(77, 77, 77),
+    0 0 82px rgb(0, 0, 0);
 }
 
-.navbar ul li {
+.navbar ul li{
     padding: 1rem;
     list-style: none;
     font-size: 1.5rem;
 }
+.navbar ul li:hover{
+    padding: 1rem;
+    list-style: none;
+    font-size: 1.5rem;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(0, 17, 255),
+    0 0 82px rgb(0, 17, 255);
+}
 
-.navbar ul a {
+.navbar ul a{
     text-decoration: none;
     color: rgb(5, 9, 65);
     font-weight: 700;
@@ -42,8 +68,12 @@ section {
 
 .table {
     padding: 8px;
+    transition: 2s;
 }
 
+.table:hover{
+    background: rgba(104, 104, 104, 0.541);
+}
 th,
 td {
     padding: 10px 100px;
@@ -61,20 +91,23 @@ td {
     color: white;
     font-size: 20px;
     cursor: pointer;
+    transition: 2s;
+}
+
+#tableBody button:hover{
+    background: rgb(49, 49, 49);
 }
 
 table th {
-    background: linear-gradient(to right top, rgb(190, 190, 190), rgb(255, 229, 229));
+    background: linear-gradient(to right top, rgba(190, 190, 190, 0.493), rgba(255, 229, 229, 0.123));
 }
 
 table td {
-    background: linear-gradient(to right top, rgb(190, 190, 190), rgb(255, 229, 229));
+    background: linear-gradient(to right top, rgba(190, 190, 190, 0.541), rgba(255, 229, 229, 0.178));
 }
 
-.footer {
-    background: linear-gradient(to top right,
-            rgb(246, 143, 164),
-            rgb(255, 206, 177));
+
+.footer{   
     display: flex;
     /* text-align: center; */
     justify-content: center;
@@ -85,30 +118,44 @@ table td {
     position: static;
     bottom: 0;
     width: 100%;
+    margin-top: 30px;
+    background: linear-gradient( 
+        to right bottom, 
+        rgba(230, 230, 230, 0.137), 
+        rgba(202, 202, 202, 0)
+    );  
+    z-index: 2;
+    backdrop-filter: blur(1rem);
+    position: relative;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(77, 77, 77),
+    0 0 82px rgb(0, 0, 0);
 }
 
 
 /* Smartphones (portrait and landscape) ---------- */
 @media screen and (min-width: 320px) and (max-width: 480px) {
-
     .navbar ul {
         display: block;
-        width: 100vh;
+        min-width: 120vw;
     }
 
     .footer {
         position: static;
         bottom: 0%;
-        width: 100vh;
+        min-width: 100vw;
     }
 
     .table {
-        padding: 2px;
+        padding: 4px;
     }
 
     th,
     td {
-        padding: 3px 25px;
+        padding: 5px 50px;
         text-align: center;
     }
 }
@@ -126,19 +173,18 @@ table td {
     }
 
     .table {
-        padding: 2px;
+        padding: 4px;
     }
 
     th,
     td {
-        padding: 3px 25px;
+        padding: 5px 50px;
         text-align: center;
     }
 }
 
 /* Tablets, iPads (portrait and landscape) ---------- */
 @media screen and (min-width: 766px) and (max-width: 1024px) {
-
     .navbar ul {
         display: block;
         min-width: 100vw;
