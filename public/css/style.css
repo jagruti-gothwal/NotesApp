@@ -159,6 +159,8 @@ h1{
 .right button:hover{
     background: grey;
     color: white;
+    height: 65px;
+    width: 250px;
 }
 
 .form{
